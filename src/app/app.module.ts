@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PoModule } from '@portinari/portinari-ui';
+import { PortinariComponent } from './portinari/portinari.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PortinariComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
