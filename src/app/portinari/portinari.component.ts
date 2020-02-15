@@ -9,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class PortinariComponent implements OnInit {
 
   public textModel: string;
+  public textMultiselect: string;
   public inputRequired: boolean;
 
+  public options: Array<any> = [
+    { value: '1', label: 'Multiselect 1' },
+    { value: '2', label: 'Multiselect 2' }
+  ];
   constructor() { }
 
   ngOnInit() {
@@ -21,8 +26,7 @@ export class PortinariComponent implements OnInit {
     this.textModel = ret;
   }
 
-  public modelSwich() {
-    this.inputRequired = !this.inputRequired;
-
+  public modelSwich(item) {
+    this.inputRequired = item;
   }
 }

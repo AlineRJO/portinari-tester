@@ -18,7 +18,7 @@
         class="po-lg-2"
         name="optionDisabled"
         [(ngModel)]="inputRequired"
-        (p-change)="modelSwich()"
+        (p-change)="modelSwich($event)"
         p-label="Required">
       </po-switch>
 
@@ -30,8 +30,20 @@
 
    </div>
 
+  <div class="p-row">
+    <div class="col-3">
+      <po-multiselect
+        name="multiselect"
+        p-label="Portinari Multiselect"
+        [p-options]="options"
+        [(ngModel)]="textMultiselect">
+      </po-multiselect>
+    </div>
+
+  </div>
   <div class="row">
     <span  class="col-3">(p-change-model): {{textModel}}</span>
+    <span class="col-3">Multiselect: {{textMultiselect}}</span>
   </div>
 
   </po-container>
