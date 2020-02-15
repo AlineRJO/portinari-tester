@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PoModule } from '@portinari/portinari-ui';
 import { PortinariComponent } from './portinari/portinari.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,9 @@ import { PortinariComponent } from './portinari/portinari.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PoModule
+    PoModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

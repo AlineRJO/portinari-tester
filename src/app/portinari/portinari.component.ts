@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PoDynamicFormField, PoDynamicFormFieldChanged, PoDynamicFormValidation, PoNotificationService } from '@portinari/portinari-ui';
-import {Fields} from './mock-data';
+
 
 @Component({
   selector: 'app-portinari',
@@ -8,28 +7,22 @@ import {Fields} from './mock-data';
   styleUrls: ['./portinari.component.css']
 })
 export class PortinariComponent implements OnInit {
-  public person = { };
-  public fields: Array<PoDynamicFormField> = Fields;
+
+  public textModel: string;
+  public inputRequired: boolean;
+
   constructor() { }
 
   ngOnInit() {
+    this.inputRequired = false;
   }
 
-  onLoadFields(value: any) {
-    console.log('onLoadFields');
-    return null;
+  public returnInputChange(ret) {
+    this.textModel = ret;
   }
 
-  onChangeFields(changedValue: PoDynamicFormFieldChanged): PoDynamicFormValidation {
-
-    if (changedValue.property === 'state') {
-      return {
-        value: { city: undefined},
-        fields: [
-          { property: 'city', gridColumns: 6, disabled: false }
-        ]
-      };
-    }
+  public modelSwich() {
+    this.inputRequired = !this.inputRequired;
 
   }
 }
