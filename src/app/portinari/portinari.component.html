@@ -2,13 +2,13 @@
   Usando o container:
   <po-container p-height="200px">
     <div class="box-container p-row">
-
       <po-input
         p-clean="true"
         class="po-lg-3"
         (p-change-model)="returnInputChange($event)"
         [p-placeholder]="'Placeholder'"
         p-required="true"
+        p-mask="999.999.999-99"
         [p-label]="'Campo com a opção clean:'"
         p-icon="po-icon-user"
         p-pattern=" '^(2[0-3]|[01][0-9]):?([0-5][0-9])$'">
@@ -22,14 +22,20 @@
         p-label="Required">
       </po-switch>
 
+        <po-datepicker-range
+          class="po-lg-3"
+          name="datepickerRange"
+          p-label="Datepicker Range">
+        </po-datepicker-range>
+
    </div>
 
-  <div class="p-row">
-    <span  class="po-lg-2">(p-change-model): {{textModel}}</span>
+  <div class="row">
+    <span  class="col-3">(p-change-model): {{textModel}}</span>
   </div>
 
   </po-container>
-
+</div>
 
 
 
