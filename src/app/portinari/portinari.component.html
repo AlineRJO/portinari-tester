@@ -1,6 +1,11 @@
+<div class="px-4">
+  <po-progress p-value="25" p-text="carregando..."></po-progress>
+</div>
+
+
 <div class="px-4 py-5">
   Usando o container:
-  <po-container p-height="200px">
+  <po-container p-height="400px">
     <div class="box-container p-row">
       <po-input
         p-clean="true"
@@ -39,9 +44,19 @@
         [(ngModel)]="textMultiselect">
       </po-multiselect>
     </div>
+    <div class="col-3">
+      <po-password
+        name="password"
+        p-label="Password">
+      </po-password>
+    </div>
 
   </div>
-  <div class="row">
+
+
+
+    <br>
+  <div class="p-row">
     <span  class="col-3">(p-change-model): {{textModel}}</span>
     <span class="col-3">Multiselect: {{textMultiselect}}</span>
   </div>
