@@ -1,5 +1,5 @@
 <div class="px-4">
-  <po-progress p-value="25" p-text="carregando..."></po-progress>
+<!--  <po-progress p-value="25" p-text="carregando..."></po-progress>-->
 </div>
 
 
@@ -12,7 +12,6 @@
         class="po-lg-3"
         (p-change-model)="returnInputChange($event)"
         [p-placeholder]="'Placeholder'"
-        p-required="true"
         p-mask="999.999.999-99"
         [p-label]="'Campo com a opção clean:'"
         p-icon="po-icon-user"
@@ -36,29 +35,30 @@
    </div>
 
   <div class="p-row">
-    <div class="col-3">
       <po-multiselect
+        class="po-lg-3"
         name="multiselect"
         p-label="Portinari Multiselect"
         [p-options]="options"
         [(ngModel)]="textMultiselect">
       </po-multiselect>
-    </div>
-    <div class="col-3">
-      <po-password
-        name="password"
-        p-label="Password">
-      </po-password>
-    </div>
+
+
 
   </div>
 
-
-
     <br>
-  <div class="p-row">
-    <span  class="col-3">(p-change-model): {{textModel}}</span>
-    <span class="col-3">Multiselect: {{textMultiselect}}</span>
+  <div class="po-row">
+    <po-password
+      class="po-lg-3"
+      name="password"
+      p-label="Password">
+    </po-password>
+  </div>
+    <br>
+  <div class="po-row">
+    <span class="col-3">(p-change-model): {{textModel}}</span>
+    <span class="po-lg-3">Multiselect: {{textMultiselect}}</span>
   </div>
 
   </po-container>
